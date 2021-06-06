@@ -1,0 +1,55 @@
+﻿<Page x:Class="Sweetshop.Pages.PageAdminTableRecipe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sweetshop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAdminTableRecipe" IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="415*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBox HorizontalAlignment="Left" Width="320" Name="tBoxFind" TextChanged="TBoxFind_Change" ></TextBox>
+            <TextBlock Text="Поиск по названию" Width="150" TextAlignment="Center"  FontSize="14" HorizontalAlignment="Left" Margin="330,0,0,0" Padding="0,5,0,0"/>
+            <Button Name="butPrintGo" HorizontalAlignment="Right" Click="Button_goPrint" >
+                <TextBlock Height="20" Margin="0" Width="167" Text="Вывести на печать" TextAlignment="Center"></TextBlock>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DataGrid Name="DGRecipe" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,-0.4" Grid.RowSpan="2">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Код" Binding="{Binding Id}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="Название" Binding="{Binding Name}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="Автор" Binding="{Binding Author}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="Тип изделия" Binding="{Binding ProductType.Name}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="Дата создания" Binding="{Binding DataCreate, StringFormat='{}{0:dd/MM/yyyy}'}" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="Цена" Binding="{Binding Price, StringFormat='c',ConverterCulture='ru-RU'}" Width="*"></DataGridTextColumn>
+                    <DataGridTemplateColumn Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="ButChange" Click="Button_editClick">
+                                    <TextBlock Height="20" Margin="0" Width="167" Text="Редактировать" TextAlignment="Center"></TextBlock>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Button Name="ButAdd" Click="Button_addClick" HorizontalAlignment="Left">
+                <TextBlock Height="20" Margin="0" Width="167" Text="Добавить" TextAlignment="Center"></TextBlock>
+            </Button>
+            <Button Name="ButDelete" Click="Button_deleteClick" HorizontalAlignment="Right">
+                <TextBlock Height="20" Margin="0" Width="167" Text="Удалить" TextAlignment="Center"></TextBlock>
+            </Button>
+        </Grid>
+        
+    </Grid>
+</Page>

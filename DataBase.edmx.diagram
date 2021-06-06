@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cfef1abdba046fb92d3f8901c5e3ccf" Name="Diagram1">
+        <EntityTypeShape EntityType="SweetshopModel.AccountType" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.Admin" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.Manadger" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.Product" Width="1.5" PointX="10.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.ProductType" Width="1.5" PointX="5.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.RecipeProduct" Width="1.5" PointX="8.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.Recipe" Width="1.5" PointX="6.125" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.SysAdmin" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweetshopModel.sysdiagram" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="SweetshopModel.FK_admin_AccountType" ManuallyRouted="false" />
+        <AssociationConnector Association="SweetshopModel.FK_Manadgers_AccountType" ManuallyRouted="false" />
+        <AssociationConnector Association="SweetshopModel.FK_SysAdmin_AccountType" ManuallyRouted="false" />
+        <AssociationConnector Association="SweetshopModel.FK_RecipeProduct_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SweetshopModel.FK_Recipes_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="SweetshopModel.FK_RecipeProduct_Recipes" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SweetshopModel.JoinHistory" Width="1.5" PointX="8.375" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

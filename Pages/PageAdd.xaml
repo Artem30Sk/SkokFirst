@@ -1,0 +1,32 @@
+﻿<Page x:Class="Sweetshop.Pages.PageAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Sweetshop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAdd" >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="320*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Имя" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Text="Логин" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="2" Text="Пароль" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1" Width="500" HorizontalAlignment="Left" MaxLength="100"></TextBox>
+        <TextBox Text="{Binding Email}" Grid.Row="1" Grid.Column="1" Width="500" HorizontalAlignment="Left" MaxLength="100"></TextBox>
+        <TextBox Text="{Binding Password}" Grid.Row="2" Grid.Column="1" Width="500" HorizontalAlignment="Left" MaxLength="100"></TextBox>
+        <Button Grid.ColumnSpan="2" Grid.Row="3"   Name="btnSave" Click="btnSave_Click">
+            <TextBlock Height="20" Margin="0" Width="100" Text="Сохранить" TextAlignment="Center"></TextBlock>
+        </Button>
+    </Grid>
+</Page>
