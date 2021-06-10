@@ -325,5 +325,8 @@
     <Resource Include="Resources\closeeye.png" />
     <Resource Include="Resources\openeye.png" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

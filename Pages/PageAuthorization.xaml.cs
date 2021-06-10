@@ -68,7 +68,7 @@ namespace Sweetshop.Pages
         private void ButtonRetry_Click(object sender, RoutedEventArgs e)
         {
             butRetry.Visibility = Visibility.Collapsed;
-            CheckConnection();
+            /*CheckConnection();*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -124,11 +124,11 @@ namespace Sweetshop.Pages
                 }
                 catch
                 {
-                    CheckConnection();
+                    /*CheckConnection();*/
                 }
             }
         }
-        private async void CheckConnection()
+        /*private async void CheckConnection()
         {
             butEnter.IsEnabled = false;
             PassBox.IsEnabled = false;
@@ -154,7 +154,7 @@ namespace Sweetshop.Pages
                 LoginBox.IsEnabled = true;
             }));
 
-        }
+        }*/
 
     }
 }
